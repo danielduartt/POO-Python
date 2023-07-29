@@ -1,0 +1,35 @@
+métodos especiaias:
+    __init__
+    __str__
+
+-------- Como comparar uma classe com outra? ----------
+para isso podemos criar métodos especiais para comparar e até somar duas classes
+Ex:
+tigre = Animal('Trigre', 200)
+leao = Animal('Leão', 150)
+leao > tigre??? não daria certo
+então fazemos um método na classe Animal() para essa comparação, sendo o __gt__
+
+def __gt__(self, other):(self e other são, respctivamente, objeto em questão e outro obj, sendo esses nomes uma conveção
+    return self.__peso > other.__peso
+
+Implementando isso na class, ao colocar leao > tigre >>> True
+------------------------------------------------------------------------------------------
+
+Listinha básica de métodos especiais:
+
+
+Unários: ( não recebem o parâmetro 'other')
+    + = __pos__
+    - = __neg__
+    ~ = __invert__
+
+Relacionais:
+    <  = __lt__
+    <= = __le__
+    == = __eq__
+    != = __ne__
+    >  = __gt__
+    >= = __ge__
+
+

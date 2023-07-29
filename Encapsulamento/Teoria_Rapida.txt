@@ -1,0 +1,54 @@
+Na	terminologia da	orientação a objetos, diz-se que um	objeto	possui
+uma	*interface*.
+
+• A	interface de um	objeto é como ele aparece
+para os	demais	objetos:
+– Suas	caracterísFcas,	sem	detalhes internos
+
+• A	interface	 de	 um	 objeto	 define	 os	serviços
+que	 ele	 pode	 realizar	 e	 conseqüentemente
+as	mensagens	que	ele	recebe
+– Um	objeto	é	“visto”	através	de	seus	métodos
+
+• Encapsulamento	é	a	proteção	dos
+atributos	ou	métodos	de	uma	classe.
+
+• Em	Python	existem	somente	o	public	e	o
+private	e	eles	são	definidos	no	próprio
+nome	do	atributo	ou	método.
+
+• Atributos	ou	métodos	iniciados	por	no
+máximo	dois	sublinhados	(underline)	são
+privados	e	todas	as	outras	formas	são
+públicas
+
+class teste:
+    var = 10   (público)
+    __var = 10 (privado)
+
+
+
+------------------------Em Python-------------------------------------------
+
+_  = protected (convenção)
+__ = private
+
+python não tem modificadores de acesso
+Ex:
+    class BaseDeDados:
+    def __init__(self):
+        self.__dados = {}
+Se eu fizer:
+bd = BaseDeDados()
+bd.__dados = "string" => estou tentando mudar dados de dicionario para string
+                      quebraria meu código, pois, apesar de nao ter colocado,
+                      criei métodos que precisam que dados seja um dicionário
+Contudo, ao fazer esse comando, o python cria uma cópia, de modo que não altere a real
+print(bd.__dados) >> "string"
+print(bd._BaseDeDados__dados) >> {} => valor real
+
+Vi tbm que esses métodos privados podem ser acessados por funções getters e setters
+
+
+
+
