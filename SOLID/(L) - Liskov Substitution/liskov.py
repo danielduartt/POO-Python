@@ -1,0 +1,4 @@
+'''
+PRINCÍPIO DA SUBSTITUIÇÃO DE LISKOV
+'''
+
